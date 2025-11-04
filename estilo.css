@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@700&display=swap');
+
+body{
+    background-color: black;
+    color: #04146c;
+    text-align: center;
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+     font-style: normal;
+
+}
+    
+main{
+    width: 50%;
+    background-color: white;
+    margin: 0 auto; /* Centra el contenedor principal */
+    padding: 1pt ; /* Añade un poco de espacio interno */
+    border: 2px solid #6f81e9;
+}
+
+h1{
+    font-weight: 900;
+    font-size: 40px;
+}
+h2{ font-weight: 400;
+    font-size: 20px;
+    color: white;
+    position: relative; /* Paso 1: Establece el contexto de apilamiento */
+    z-index: 1; /* Paso 4: Pone el h2 en una capa superior */
+   
+}
+h2::after {
+    content: ""; /* Paso 2: Obligatorio para pseudo-elementos */
+    position: absolute; /* Paso 3: Permite posicionar la franja libremente */
+    bottom: 0; /* Lo posiciona en la parte inferior del h2 */
+    left:0; /* Ajusta la posición de la franja */
+    width: 100%; /* Ancho de la franja, un poco más grande que el texto */
+    height: 30px; /* Altura de la franja */
+    background-color: #04146c; /* Elige el color que prefieras para la franja */
+    z-index: -1; /* Paso 4: Pone la franja en una capa inferior al h2 */
+}
+h3{
+      font-weight: 400;
+}
+p{
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+}
+p::after {
+    content: "";
+    position: absolute; /* **Paso 2:** Permite mover la franja libremente */
+    left: 0; /* **Paso 3:** Se alinea con el borde izquierdo de `main` */
+    width: 100%; /* **Paso 4:** Se estira para ocupar el ancho completo de `main` */
+    height: 70px; /* Altura de la nueva franja */
+    bottom: 0;
+    background-color: #edf7ff; /* Color de la nueva franja */
+    /* **Paso 5:** Posiciona la franja justo debajo del `p` */
+    z-index: -1;
+}
+img{
+    width: 400px;
+
+}
